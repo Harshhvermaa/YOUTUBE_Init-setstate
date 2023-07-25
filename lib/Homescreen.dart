@@ -20,10 +20,23 @@ class _HomescreenState extends State<Homescreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Init State Function"),
+        title: Text("Setstate State Function"),
       ),
-      body: Center(
-        child: Text("${num}"),
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Center(
+            child: Text("${num}"),
+          ),
+          ElevatedButton(
+            onPressed: (){
+              setState(() {
+                num++; 
+              });
+            },
+            child: Text("Increase num")
+            )
+        ],
       ),
     );
   }
